@@ -36,7 +36,14 @@ export default function Home() {
               Desa Kare
             </h1>
           </section>
-          <MainButton className="mx-auto mt-4">Lihat di Maps</MainButton>
+          <a
+            href="https://maps.app.goo.gl/CVprZFof3Vg6P7ph9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto mt-4"
+          >
+            <MainButton >Lihat di Maps</MainButton>
+          </a>
         </section>
         <section className="flex gap-4 items-center justify-center w-[80%] border-l border-white pl-5">
           <p className="text-white text-base text-justify">
