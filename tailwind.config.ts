@@ -8,9 +8,18 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "Grenze-Gotisch": ["Grenze Gotisch", "serif"],
+        Figtree: ["Figtree", "serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        black: "#000000",
+        "olive-green": "#606c38",
+        "sage-green": "#ccd5ae",
+        "light-gray": "#dddddd", 
+        "pale-yellow": "#e9edc9",
+        "off-white": "#f8f8f8", 
+        white: "#ffffff",
       },
     },
   },
