@@ -18,7 +18,7 @@ export default function Carousel({ items }: { items: Item[] }) {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [items.length]);
 
   const nextItem = () => {
     setCurrentIndex((prev) => (prev + 1) % items.length);
@@ -29,7 +29,7 @@ export default function Carousel({ items }: { items: Item[] }) {
   };
 
   return (
-    <div className="w-full h-[30rem] rounded-t-md overflow-clip relative">
+    <div className="w-full h-[30rem] rounded-t-xl overflow-clip relative">
       <motion.div
         key={currentIndex}
         initial={{ opacity: 0, y: -50 }}

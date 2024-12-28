@@ -15,6 +15,7 @@ export default {
       colors: {
         custom: {
           black: "#000000",
+          "dark-green" : "#283618",
           "olive-green": "#606c38",
           "light-olive-green": "#6c7a3f",
           "sage-green": "#ccd5ae",
