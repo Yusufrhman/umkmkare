@@ -6,7 +6,7 @@ export default function NavLink({
   href,
 }: {
   children: React.ReactNode;
-  className: string;
+  className?: string;
   href: string;
 }) {
   return (
