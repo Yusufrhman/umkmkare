@@ -1,67 +1,78 @@
-import Carousel from "@/components/carousel/Carousel";
-
-import { FaLocationDot } from "react-icons/fa6";
-
-import CAROUSEL from "@/public/dev/carousel.png";
-import MainButton from "@/components/button/MainButton";
-
-const dummyItems = [
-  {
-    title: "Mari Kenali dan Dukung UMKM Desa Kare",
-    image: CAROUSEL,
-  },
-  {
-    title: "lorem ipsum",
-    image: CAROUSEL,
-  },
-  {
-    title: "loremmm iokasnksk",
-    image: CAROUSEL,
-  },
-  {
-    title: " nasjknsajkn naksdnkdasn kask ksnadkds",
-    image: CAROUSEL,
-  },
-];
+import { HighlightCard } from "@/components/cards/HighlightCard";
+import HeroSection from "@/components/landingPage/HeroSection";
+import KOPI from "@/public/dev/kopi.png";
+import Image from "next/image";
+import { FaLeaf } from "react-icons/fa";
+import { MdFastfood } from "react-icons/md";
 
 export default function Home() {
   return (
     <main>
-      <Carousel items={dummyItems} />
-      <div className="w-full h-fit px-8 py-8 bg-gradient-to-r from-custom-dark-green via-custom-dark-green to-custom-olive-green my-5 rounded-b-xl flex items-center justify-start">
-        <section className="w-fit flex flex-col items-start justify-center pr-5">
-          <section className="flex gap-4 items-center justify-start w-fit">
-            <FaLocationDot size={50} color="white" />
-            <h1 className="text-5xl font-Grenze-Gotisch text-white w-fit">
-              Desa Kare
-            </h1>
-          </section>
-          <a
-            href="https://maps.app.goo.gl/CVprZFof3Vg6P7ph9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-auto mt-4"
-          >
-            <MainButton >Lihat di Maps</MainButton>
-          </a>
-        </section>
-        <section className="flex gap-4 items-center justify-center w-[80%] border-l border-white pl-5">
-          <p className="text-white text-base text-justify">
-            Desa Kare Kecamatan Kare Kabupaten Madiun terletak di Pegunungan
-            Wilis paling tenggara Kabupaten Madiun berbatasan dengan Kabupaten
-            Ponorogo, Trenggalek, Tulungagung, Nganjuk dan Kediri. Potensi flora
-            dan fauna yang ada di Pegunungan Wilis serta kekayaan alam Desa
-            Wisata Kare menguatkan Desa Wisata Kare untuk fokus berkomitmen pada
-            konservasi alam dan ikut berperan aktif menjaga ekosistem alam.
-            Banyak daya tarik wisata yang bersifat alam, budaya dan buatan.
-            Untuk itu perlu kebersamaan dalam pengelolaan alam yang ada di Desa
-            Kare melalui berbagai sektor dan inovasi yang terus menerus untuk
-            melestarikan wisata alam tersebut guna kesejahteraan masyarakat dan
-            mewujudkan pariwisata yang berkelanjutan sehingga Desa Kare mampu
-            membangun desa dari Pariwisata.
-          </p>
-        </section>
-      </div>
+      <HeroSection />
+      <section className="my-10  gap-16 mx-10 h-fit flex items-start justify-center">
+        <div className="flex flex-col justify-between w-[55%] h-[25rem] 2xl:h-[27.5rem]">
+          <div>
+            <h2 className="bg-gradient-to-r from-custom-dark-green via-custom-dark-green to-custom-olive-green text-transparent bg-clip-text text-4xl font-semibold tracking-wider ">
+              UMKM Desa Kare, Menyajikan Produk Lokal yang Berbeda
+            </h2>
+            <p className="text-base text-black tracking-widest text-justify mt-3">
+              Jelajahi pilihan produk khas dari UMKM Desa Kare, dari kerajinan
+              tangan unik hingga kuliner tradisional. Setiap produk membawa
+              kekayaan budaya dan kualitas asli dari para pelaku usaha lokal.
+            </p>
+          </div>
+          <ul className="flex gap-4 h-fit mt-5">
+            <li>
+              <HighlightCard.Root className="h-[12.5rem] 2xl:h-[15rem]">
+                <HighlightCard.Icon>
+                  <MdFastfood size={24} />
+                </HighlightCard.Icon>
+                <HighlightCard.Title>Kuliner Khas Kare</HighlightCard.Title>
+
+                <HighlightCard.Description>
+                  Produk kami dibuat dengan bahan-bahan alami dan prinsip
+                  keberlanjutan untuk menjaga lingkungan tetap lestari.
+                </HighlightCard.Description>
+              </HighlightCard.Root>
+            </li>
+            <li>
+              <HighlightCard.Root className="h-[12.5rem] 2xl:h-[15rem]">
+                <HighlightCard.Icon>
+                  <MdFastfood size={24} />
+                </HighlightCard.Icon>
+                <HighlightCard.Title>Kuliner Khas Kare</HighlightCard.Title>
+
+                <HighlightCard.Description>
+                  Produk kami dibuat dengan bahan-bahan alami dan prinsip
+                  keberlanjutan untuk menjaga lingkungan tetap lestari.
+                </HighlightCard.Description>
+              </HighlightCard.Root>
+            </li>
+          </ul>
+        </div>
+        <div className="h-full">
+          <div className="h-[25rem] 2xl:h-[27.5rem] col-span-5 relative w-[30rem] 2xl:w-[32.5rem] flex ">
+            <Image
+              src={KOPI}
+              className="object-cover w-full h-full rounded-lg"
+              alt="kopi kare enak"
+              layout="fill"
+              objectFit="cover"
+            />
+            <HighlightCard.Root className="h-[12.5rem] 2xl:h-[15rem] absolute top-0 right-0 m-4">
+              <HighlightCard.Icon>
+                <MdFastfood size={24} />
+              </HighlightCard.Icon>
+              <HighlightCard.Title>Kuliner Khas Kare</HighlightCard.Title>
+
+              <HighlightCard.Description>
+                Produk kami dibuat dengan bahan-bahan alami dan prinsip
+                keberlanjutan untuk menjaga lingkungan tetap lestari.
+              </HighlightCard.Description>
+            </HighlightCard.Root>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
