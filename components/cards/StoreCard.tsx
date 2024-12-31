@@ -13,12 +13,12 @@ const StoreCard: React.FC<StoreCardProps> = ({
   description,
 }) => {
   return (
-    <div className="border-2 border-custom-sage-green p-4 rounded-lg h-full">
-      <div className="w-full h-[15rem]">
+    <div className="border-2 border-custom-sage-green p-4 rounded-lg h-full group bg-white">
+      <div className="w-full h-[15rem] rounded-md overflow-clip">
         <Image
           src={imageSrc}
           alt={title}
-          className="rounded-md w-full h-full object-cover object-center"
+          className=" w-full h-full object-cover object-center group-hover:scale-110 transition"
           objectFit="cover"
           objectPosition="center"
           width={300}

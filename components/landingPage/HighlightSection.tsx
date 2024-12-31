@@ -39,7 +39,6 @@ export default function HighlightSection() {
 
               <HighlightCard.Description>
                 Produk kami dibuat dengan bahan-bahan alami dan prinsip
-                keberlanjutan untuk menjaga lingkungan tetap lestari.
               </HighlightCard.Description>
             </HighlightCard.Root>
           </li>
@@ -62,7 +61,11 @@ export default function HighlightSection() {
 
             <HighlightCard.Description>
               Produk kami dibuat dengan bahan-bahan alami dan prinsip
-              keberlanjutan untuk menjaga lingkungan tetap lestari.
+              keberlanjutan untuk menjaga lingkungan tetap lestari. Produk kami
+              dibuat dengan bahan-bahan alami dan prinsip keberlanjutan untuk
+              menjaga lingkungan tetap lestari. Produk kami dibuat dengan
+              bahan-bahan alami dan prinsip keberlanjutan untuk menjaga
+              lingkungan tetap lestari.
             </HighlightCard.Description>
           </HighlightCard.Root>
         </div>

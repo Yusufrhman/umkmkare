@@ -24,7 +24,7 @@ interface HighlightCardDescriptionProps {
 const Root: React.FC<HighlightCardRootProps> = ({ children, className }) => {
   return (
     <div
-      className={`bg-custom-off-white rounded-lg p-4 aspect-[3/2] flex flex-col items-start gap-2 justify-center ${className}`}
+      className={`bg-custom-off-white rounded-lg p-4 aspect-[3/2] flex flex-col items-start gap-2 justify-start ${className}`}
     >
       {children}
     </div>
