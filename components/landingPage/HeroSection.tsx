@@ -42,7 +42,7 @@ export default function HeroSection() {
             rel="noopener noreferrer"
             className="mx-auto mt-4"
           >
-            <MainButton>Lihat di Maps</MainButton>
+            <MainButton reversed>Lihat di Maps</MainButton>
           </a>
         </section>
         <section className="flex gap-4 items-center justify-center w-[80%] border-l border-white pl-5">

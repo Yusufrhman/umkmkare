@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "UMKM DESA KARE",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className={`w-[95%] mx-auto font-Figtree`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
