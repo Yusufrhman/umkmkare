@@ -27,7 +27,7 @@ const dummyItems = [
 export default function HeroSection() {
   return (
     <>
-      <Carousel items={dummyItems} />
+      <Carousel items={dummyItems} className=""/>
       <div className="w-full h-fit px-8 py-8 bg-gradient-to-r from-custom-dark-green via-custom-dark-green to-custom-olive-green my-5 rounded-b-xl flex items-center justify-start">
         <section className="w-fit flex flex-col items-start justify-center pr-5">
           <section className="flex gap-4 items-center justify-start w-fit">

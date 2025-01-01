@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`w-[95%] mx-auto font-Figtree`}>
+      <body className={`mx-10 font-Figtree`}>
         <Header />
         {children}
         <Footer />

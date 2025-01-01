@@ -9,7 +9,7 @@ type Item = {
   image: StaticImageData;
 };
 
-export default function Carousel({ items }: { items: Item[] }) {
+export default function Carousel({ items, className }: { items: Item[], className: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Carousel({ items }: { items: Item[] }) {
   };
 
   return (
-    <div className="w-full h-[30rem] rounded-t-xl overflow-clip relative">
+    <div className={`w-full h-[30rem] rounded-t-xl overflow-clip relative ${className}`}>
       <motion.div
         key={currentIndex}
         initial={{ opacity: 0, y: -50 }}
