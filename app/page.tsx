@@ -11,6 +11,7 @@ import MainButton from "@/components/button/MainButton";
 import GALERI from "@/public/dev/galeri.png";
 import Image from "next/image";
 import GaleryCard from "@/components/cards/GaleryCard";
+import Link from "next/link";
 
 const storeCardData = [
   {
@@ -64,11 +65,13 @@ export default function Home() {
           {storeCardData.map((data, index) => {
             return (
               <li className="h-full w-full" key={index}>
-                <StoreCard
-                  imageSrc={data.imageSrc}
-                  title={data.title}
-                  description={data.description}
-                />
+                <Link href={data.title}>
+                  <StoreCard
+                    imageSrc={data.imageSrc}
+                    title={data.title}
+                    description={data.description}
+                  />
+                </Link>
               </li>
             );
           })}
