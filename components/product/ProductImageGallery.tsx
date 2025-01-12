@@ -27,7 +27,7 @@ export default function ProductImageGallery({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.25 }}
-        className="aspect-square rounded-2xl overflow-hidden relative w-2/3"
+        className="aspect-square rounded-2xl overflow-hidden relative w-3/4"
       >
         <Image
           className="w-full h-full object-cover"
@@ -37,7 +37,7 @@ export default function ProductImageGallery({
           alt=""
         />
       </motion.div>
-      <ul className="flex flex-col h-full gap-4 w-1/3">
+      <ul className="flex flex-col h-full gap-4 w-1/4">
         {Array.from({ length: 3 }).map((_, i) => {
           const isActive = activeIndex === i;
           return (

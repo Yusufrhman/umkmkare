@@ -25,8 +25,8 @@ export default function Store({ params }: { params: { productId: string } }) {
   return (
     <main className="min-h-[100vh] space-y-10 mx-20">
       <section className="flex gap-14 h-[25rem]">
-        <ProductImageGallery images={productData.images} className="w-1/2" />
-        <div className="w-1/2 h-full rounded-2xl ring-4 ring-custom-sage-green p-8 flex flex-col justify-between">
+        <ProductImageGallery images={productData.images} className="" />
+        <div className=" h-full rounded-2xl ring-4 ring-custom-sage-green p-8 flex flex-col justify-between max-w-[30rem] min-w-[25rem]">
           <h1 className="bg-gradient-to-r from-custom-dark-green via-custom-olive-green to-custom-light-olive-green text-transparent bg-clip-text text-3xl font-semibold tracking-wider">
             Jam Dinding Kayu
           </h1>
