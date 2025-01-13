@@ -2,14 +2,12 @@ import HeroSection from "@/components/landingPage/HeroSection";
 import HighlightSection from "@/components/landingPage/HighlightSection";
 import H3 from "@/components/title/H3";
 
-import { motion } from "framer-motion";
 
 import MADU from "@/public/dev/madu.png";
 import StoreCard from "@/components/cards/StoreCard";
 import MainButton from "@/components/button/MainButton";
 
 import GALERI from "@/public/dev/galeri.png";
-import Image from "next/image";
 import GaleryCard from "@/components/cards/GaleryCard";
 import Link from "next/link";
 
