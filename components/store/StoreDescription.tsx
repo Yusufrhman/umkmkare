@@ -1,15 +1,14 @@
-import { FaStar } from "react-icons/fa";
 import MainButton from "@/components/button/MainButton";
 
 interface StoreDescriptionProps {
   storeName: string;
-  rating: number;
+  // rating: number;
   description: string;
 }
 
 export default function StoreDescription({
   storeName,
-  rating,
+  // rating,
   description,
 }: StoreDescriptionProps) {
   return (

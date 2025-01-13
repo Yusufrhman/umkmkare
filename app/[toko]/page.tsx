@@ -4,7 +4,6 @@ import StoreBanner from "@/components/store/StoreBanner";
 import StoreDescription from "@/components/store/StoreDescription";
 import StoreGallery from "@/components/store/StoreGallery";
 import H3 from "@/components/title/H3";
-import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "@/components/product/ProductCard";
 
@@ -37,7 +36,7 @@ export default function StorePage({ params }: { params: { toko: string } }) {
       <section className="flex flex-col lg:flex-row items-center justify-center gap-10 my-10 mx-0 sm:mx-2 md:mx-4 lg:mx-10">
         <StoreDescription
           storeName={storeData.name}
-          rating={storeData.rating}
+          // rating={storeData.rating}
           description={storeData.description}
         />
         <div className="w-full lg:w-3/5 h-fit">
