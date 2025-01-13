@@ -1,4 +1,3 @@
-// components/store/StoreDescription.tsx
 import { FaStar } from "react-icons/fa";
 import MainButton from "@/components/button/MainButton";
 
@@ -14,32 +13,39 @@ export default function StoreDescription({
   description,
 }: StoreDescriptionProps) {
   return (
-    <div className="flex flex-col gap-2 w-2/5">
-      <h2 className="text-custom-olive-green text-4xl font-semibold tracking-wider">
+    <div className="flex flex-col items-center lg:items-start gap-4 w-full lg:w-2/5">
+      <h2 className="text-custom-olive-green text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-wide">
         {storeName}
       </h2>
-      <div>
-        <p className="text-custom-olive-green text-3xl inline font-medium">
+      {/* ini buat rating */}
+      {/* <div className="flex items-center">
+        <p className="text-custom-olive-green text-xl sm:text-2xl font-medium">
           {rating}
         </p>
-        <ul className="ml-3 gap-1 inline-flex">
+        <ul className="ml-3 flex gap-1">
           {Array.from({ length: 5 }).map((_, i) => (
             <li key={i}>
               <FaStar
                 color={i < Math.round(rating) ? "#FF8700" : "#E0E0E0"}
-                size={24}
+                size={20}
               />
             </li>
           ))}
         </ul>
+      </div> */}
+      <div className="flex flex-col-reverse lg:flex-col items-center lg:items-start gap-5">
+        <div>
+          <h4 className="font-medium text-lg sm:text-xl lg:text-2xl tracking-wide">
+            Deskripsi
+          </h4>
+          <p className="tracking-wide font-thin text-sm md:text-base text-justify lg:line-clamp-6">
+            {description}
+          </p>
+        </div>
+        <MainButton className="w-fit text-xs sm:text-sm">
+          Lihat di Instagram
+        </MainButton>
       </div>
-      <div>
-        <h4 className="font-medium text-2xl tracking-wide">Deskripsi</h4>
-        <p className="tracking-wide font-thin text-sm line-clamp-[7] text-justify">
-          {description}
-        </p>
-      </div>
-      <MainButton className="w-fit text-sm">Lihat di Instagram</MainButton>
     </div>
   );
 }

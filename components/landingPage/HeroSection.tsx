@@ -48,7 +48,7 @@ export default function HeroSection() {
           </a>
         </section>
         <section className="flex gap-4 items-center justify-center sm:w-[70%] md:w-[75%] lg:w-[80%] sm:border-l border-white sm:pl-5">
-          <p className="text-white text-xs sm:text-sm lg:text-base text-justify">
+          <p className="text-white text-sm lg:text-base text-justify">
             Desa Kare Kecamatan Kare Kabupaten Madiun terletak di Pegunungan
             Wilis paling tenggara Kabupaten Madiun berbatasan dengan Kabupaten
             Ponorogo, Trenggalek, Tulungagung, Nganjuk dan Kediri. Potensi flora

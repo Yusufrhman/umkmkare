@@ -10,7 +10,7 @@ export default function HighlightSection() {
       <div className="flex flex-col justify-normal lg:justify-between lg:w-[55%] lg:h-[25rem] 2xl:h-[27.5rem]">
         <div>
           <H3>UMKM Desa Kare, Menyajikan Produk Lokal yang Berbeda</H3>
-          <p className="text-xs sm:text-sm lg:text-base text-black tracking-widest text-justify mt-3">
+          <p className="text-sm lg:text-base text-black tracking-widest text-justify mt-3">
             Jelajahi pilihan produk khas dari UMKM Desa Kare, dari kerajinan
             tangan unik hingga kuliner tradisional. Setiap produk membawa
             kekayaan budaya dan kualitas asli dari para pelaku usaha lokal.

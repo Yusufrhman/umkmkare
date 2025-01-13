@@ -8,7 +8,7 @@ export default function StoreBanner({
   storeName?: string;
 }) {
   return (
-    <div className="w-full aspect-[1546/423] bg-custom-off-white rounded-xl overflow-clip relative">
+    <div className="w-full aspect-[7/4] sm:aspect-[10/4] md:aspect-[1400/423] lg:aspect-[1546/423] bg-custom-off-white rounded-xl overflow-clip relative">
       <Image
         src={imageSrc}
         className="object-cover object-center w-full h-full absolute z-0"

@@ -26,7 +26,7 @@ export default function Store({ params }: { params: { toko: string } }) {
       STOREBANNER.src,
       STOREBANNER.src,
     ],
-    products: []
+    products: [],
   };
 
   return (
@@ -34,25 +34,26 @@ export default function Store({ params }: { params: { toko: string } }) {
       <section>
         <StoreBanner imageSrc={storeData.banner} storeName={storeData.name} />
       </section>
-      <section className="flex items-center justify-center gap-10 my-10 mx-10">
+      <section className="flex flex-col lg:flex-row items-center justify-center gap-10 my-10 mx-0 sm:mx-2 md:mx-4 lg:mx-10">
         <StoreDescription
           storeName={storeData.name}
           rating={storeData.rating}
           description={storeData.description}
         />
-        <div className="w-3/5 h-fit">
+        <div className="w-full lg:w-3/5 h-fit">
           <StoreGallery images={storeData.gallery_images} />
         </div>
       </section>
-      <section className="my-12 mx-20">
+
+      <section className="my-12 mx-0 sm:mx-5 md:mx-10 lg:mx-20">
         <H3 className="text-center via-custom-olive-green">Produk</H3>
-        <ul className="grid grid-cols-4 gap-5 my-8">
+        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-5 my-3 sm:my-4 md:my-6 lg:my-8">
           {Array.from({ length: 8 }).map((_, i) => (
             <li key={i} className="w-full tracking-wide">
               <Link href={`/${params.toko}/product`}>
                 <ProductCard
                   imageSrc={STOREBANNER.src}
-                  name={"product"}
+                  name={"Product"}
                   price={150000}
                 />
               </Link>
