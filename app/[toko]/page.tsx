@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ProductCard from "@/components/product/ProductCard";
 
-export default function Store({ params }: { params: { toko: string } }) {
+export default function StorePage({ params }: { params: { toko: string } }) {
   const storeData = {
     name: decodeURIComponent(params.toko),
     rating: 4.7,

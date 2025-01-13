@@ -17,7 +17,7 @@ const productData = {
   images: [{ image: IMG1.src }, { image: IMG2.src }, { image: IMG3.src }],
 };
 
-export default function Store({ params }: { params: { productId: string } }) {
+export default function ProductPage({ params }: { params: { productId: string } }) {
   // const productData = {
   //   name: decodeURIComponent(params.productId),
   // };
