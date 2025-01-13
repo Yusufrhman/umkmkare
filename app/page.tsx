@@ -62,11 +62,11 @@ export default function Home() {
           Eksplorasi Produk Terbaru dari UMKM Kare
         </H3>
         <div className="overflow-scroll -mx-8">
-          <ul className="flex sm:grid place-items-center sm:justify-self-center sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 my-8 mx-8">
+          <ul className="flex sm:grid place-items-start sm:justify-self-center sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 my-8 mx-8">
             {storeCardData.map((data, index) => {
               return (
                 <li
-                  className="w-full min-w-[17.5rem] max-w-[20rem] md:max-w-[24rem] lg:max-w-[28rem]"
+                  className="w-full h-full min-w-[17.5rem] max-w-[20rem] md:max-w-[24rem] lg:max-w-[28rem]"
                   key={index}
                 >
                   <Link href={data.title}>
