@@ -6,7 +6,7 @@ export default function H3({
   className?: string;
 }) {
   let classes =
-    "bg-gradient-to-r from-custom-dark-green via-custom-dark-green to-custom-olive-green text-transparent bg-clip-text text-4xl font-semibold tracking-wider ";
+    "bg-gradient-to-r from-custom-dark-green via-custom-dark-green to-custom-olive-green text-transparent bg-clip-text text-lg md:text-xl lg:text-2xl xl:text-4xl font-semibold tracking-wider ";
   classes += className;
   return (
     <h3 className={classes}>

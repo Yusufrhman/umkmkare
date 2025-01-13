@@ -24,7 +24,7 @@ interface HighlightCardDescriptionProps {
 const Root: React.FC<HighlightCardRootProps> = ({ children, className }) => {
   return (
     <div
-      className={`bg-custom-off-white rounded-lg p-4 aspect-[3/2] flex flex-col items-start gap-2 justify-start ${className}`}
+      className={`bg-custom-off-white rounded-lg p-4 aspect-[4/2] flex flex-col items-start gap-2 justify-start ${className}`}
     >
       {children}
     </div>
@@ -49,7 +49,7 @@ const Description: React.FC<HighlightCardDescriptionProps> = ({
   children,
   className,
 }) => {
-  return <p className={`text-gray-700 line-clamp-4 ${className || ""}`}>{children}</p>;
+  return <p className={`text-gray-700 lg:line-clamp-4 ${className || ""}`}>{children}</p>;
 };
 
 // HighlightCard Namespace

@@ -27,12 +27,14 @@ const dummyItems = [
 export default function HeroSection() {
   return (
     <>
-      <Carousel items={dummyItems} className=""/>
-      <div className="w-full h-fit px-8 py-8 bg-gradient-to-r from-custom-dark-green via-custom-dark-green to-custom-olive-green my-5 rounded-b-xl flex items-center justify-start">
-        <section className="w-fit flex flex-col items-start justify-center pr-5">
-          <section className="flex gap-4 items-center justify-start w-fit">
-            <FaLocationDot size={50} color="white" />
-            <h1 className="text-5xl font-Grenze-Gotisch text-white w-fit">
+      <div className="aspect-video max-h-[30rem] w-full">
+        <Carousel items={dummyItems} className="" />
+      </div>
+      <div className="w-full h-fit px-4 py-3 sm:p-4 md:px-8 md:py-8 bg-gradient-to-r from-custom-dark-green via-custom-dark-green to-custom-olive-green my-5 rounded-b-xl flex flex-col sm:flex-row items-center justify-start">
+        <section className="sm:w-[30%] md:w-[25%] lg:w-[20%] flex sm:flex-col items-start w-full justify-between sm:justify-center sm:pr-5 mb-4 sm:mb-0">
+          <section className="flex gap-1  md:gap-4 items-center justify-start w-fit">
+            <FaLocationDot color="white" className="text-xl md:text-5xl" />
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-Grenze-Gotisch text-white w-fit">
               Desa Kare
             </h1>
           </section>
@@ -40,13 +42,13 @@ export default function HeroSection() {
             href="https://maps.app.goo.gl/CVprZFof3Vg6P7ph9"
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-auto mt-4"
+            className=" sm:mt-4 w-fit"
           >
-            <MainButton reversed>Lihat di Maps</MainButton>
+            <MainButton reversed className="text-sm md:text-base p-1">Lihat di Maps</MainButton>
           </a>
         </section>
-        <section className="flex gap-4 items-center justify-center w-[80%] border-l border-white pl-5">
-          <p className="text-white text-base text-justify">
+        <section className="flex gap-4 items-center justify-center sm:w-[70%] md:w-[75%] lg:w-[80%] sm:border-l border-white sm:pl-5">
+          <p className="text-white text-xs sm:text-sm lg:text-base text-justify">
             Desa Kare Kecamatan Kare Kabupaten Madiun terletak di Pegunungan
             Wilis paling tenggara Kabupaten Madiun berbatasan dengan Kabupaten
             Ponorogo, Trenggalek, Tulungagung, Nganjuk dan Kediri. Potensi flora
