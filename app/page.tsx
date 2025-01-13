@@ -55,7 +55,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <HighlightSection />
-      <section className=" mt-14 mx-4 lg:mx-12">
+      <section className=" mt-14 md:mx-4 lg:mx-12">
         <H3 className="text-center text-xl md:text-2xl lg:text-3xl xl:w-1/2 mx-auto">
           Eksplorasi Produk Terbaru dari UMKM Kare
         </H3>
