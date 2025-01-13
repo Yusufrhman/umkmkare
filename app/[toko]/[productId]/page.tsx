@@ -1,3 +1,4 @@
+"use server";
 import STOREBANNER from "@/public/dev/store-banner.png";
 import H3 from "@/components/title/H3";
 import Link from "next/link";
@@ -17,17 +18,15 @@ const productData = {
   images: [{ image: IMG1.src }, { image: IMG2.src }, { image: IMG3.src }],
 };
 
-export default function ProductPage({
-  params,
-}: {
-  params: { productId: string };
-}) {
+export type paramsType = Promise<{ productId: string }>;
+
+export default async function ProductPage({ params }: { params: paramsType }) {
   // const productData = {
   //   name: decodeURIComponent(params.productId),
   // };
-
+  const { productId } = await params;
   return (
-    <main key={params.productId} className="min-h-[100vh] space-y-10 ">
+    <main key={productId} className="min-h-[100vh] space-y-10 ">
       <section className="flex flex-col lg:flex-row gap-6 md:gap-6 lg:gap-10 xl:gap-14 h-fit sm:mx-8 md:mx-25 xl:mx-20">
         <div className="w-full aspect-video sm:aspect-[2/1] md:aspect-[4/1] lg:aspect-video">
           <ProductImageGallery images={productData.images} className="" />

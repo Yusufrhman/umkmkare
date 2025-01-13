@@ -1,15 +1,19 @@
+"use server"
 import STOREBANNER from "@/public/dev/store-banner.png";
 import StoreBanner from "@/components/store/StoreBanner";
 
 import StoreDescription from "@/components/store/StoreDescription";
+
 import StoreGallery from "@/components/store/StoreGallery";
 import H3 from "@/components/title/H3";
 import Link from "next/link";
 import ProductCard from "@/components/product/ProductCard";
 
-export default function StorePage({ params }: { params: { toko: string } }) {
+export type paramsType = Promise<{ toko: string }>;
+export default async function StorePage({ params }: { params: paramsType }) {
+  const { toko } = await params;
   const storeData = {
-    name: decodeURIComponent(params.toko),
+    name: decodeURIComponent(toko),
     rating: 4.7,
     description:
       "Ghaniya Furniture menawarkan berbagai furnitur berkualitas dengan desain khas yang menggabungkan sentuhan modern dan tradisional. Dibuat dari material pilihan oleh pengrajin berpengalaman, setiap produk menghadirkan kenyamanan, daya tahan, dan estetika yang sempurna untuk melengkapi keindahan rumah Anda.",
@@ -49,7 +53,7 @@ export default function StorePage({ params }: { params: { toko: string } }) {
         <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-5 my-3 sm:my-4 md:my-6 lg:my-8">
           {Array.from({ length: 8 }).map((_, i) => (
             <li key={i} className="w-full tracking-wide">
-              <Link href={`/${params.toko}/product`}>
+              <Link href={`/${toko}/product`}>
                 <ProductCard
                   imageSrc={STOREBANNER.src}
                   name={"Product"}
