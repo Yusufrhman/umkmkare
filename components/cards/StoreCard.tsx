@@ -28,10 +28,10 @@ const StoreCard: React.FC<StoreCardProps> = ({
         />
       </div>
       <div className="flex justify-between items-center mt-4">
-        <h4 className="text-lg md:text-xl lg:text-2xl font-semibold">
+        <h4 className="text-lg md:text-xl lg:text-xl xl:text-2xl font-semibold">
           {title}
         </h4>
-        <MainButton className="text-sm md:text-base">Lihat Toko</MainButton>
+        <MainButton className="text-sm xl:text-base">Lihat Toko</MainButton>
       </div>
       <p className="text-gray-700 text-sm md:text-base font-light tracking-wide mt-2 line-clamp-3">
         {description}
