@@ -20,14 +20,14 @@ export default function ProductImageGallery({
     return () => clearInterval(interval);
   }, [activeIndex]);
   return (
-    <div className={`flex gap-4  ${className}`}>
+    <div className={`flex gap-2 sm:gap-4 w-full h-full  ${className}`}>
       <motion.div
         key={activeIndex}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.25 }}
-        className="aspect-square rounded-2xl overflow-hidden relative w-3/4"
+        className="aspect-[12/11] sm:aspect-[2/1] rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden relative w-3/4"
       >
         <Image
           className="w-full h-full object-cover"
@@ -37,23 +37,23 @@ export default function ProductImageGallery({
           alt=""
         />
       </motion.div>
-      <ul className="flex flex-col h-full gap-4 w-1/4">
+      <ul className="flex flex-col h-full gap-2 sm:gap-4 md:gap-4 w-1/4">
         {Array.from({ length: 3 }).map((_, i) => {
           const isActive = activeIndex === i;
           return (
             <li key={images[i].image} className="h-1/3">
               <button
                 onClick={() => setActiveIndex(i)}
-                className={`h-full w-full rounded-2xl relative`}
+                className={`h-full w-full rounded-lg sm:rounded-xl md:rounded-2xl relative`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="product-gallery-indicator"
-                    className="absolute w-full h-full bg-transparent ring-4 ring-custom-sage-green rounded-xl"
+                    className="absolute w-full h-full bg-transparent ring-4 ring-custom-sage-green rounded-lg sm:rounded-xl md:rounded-2xl"
                   ></motion.div>
                 )}
                 <Image
-                  className="w-full h-full object-cover rounded-xl"
+                  className="w-full h-full object-cover rounded-lg sm:rounded-xl md:rounded-2xl"
                   src={images[i].image}
                   width={500}
                   height={500}

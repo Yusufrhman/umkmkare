@@ -23,34 +23,42 @@ export default function Store({ params }: { params: { productId: string } }) {
   // };
 
   return (
-    <main className="min-h-[100vh] space-y-10 mx-20">
-      <section className="flex gap-14 h-[25rem]">
-        <ProductImageGallery images={productData.images} className="" />
-        <div className=" h-full rounded-2xl ring-4 ring-custom-sage-green p-8 flex flex-col justify-between max-w-[30rem] min-w-[25rem]">
-          <h1 className="bg-gradient-to-r from-custom-dark-green via-custom-olive-green to-custom-light-olive-green text-transparent bg-clip-text text-3xl font-semibold tracking-wider">
+    <main className="min-h-[100vh] space-y-10 ">
+      <section className="flex flex-col lg:flex-row gap-6 md:gap-6 lg:gap-10 xl:gap-14 h-fit sm:mx-8 md:mx-25 xl:mx-20">
+        <div className="w-full aspect-video sm:aspect-[2/1] md:aspect-[4/1] lg:aspect-video">
+          <ProductImageGallery images={productData.images} className="" />
+        </div>
+        <div className=" h-full rounded-2xl ring-4 ring-custom-sage-green p-4 sm:p-6 md:p-8 flex flex-col justify-between lg:max-w-[30rem] gap-2 md:gap-4">
+          <h1 className="bg-gradient-to-r from-custom-dark-green via-custom-olive-green to-custom-light-olive-green text-transparent bg-clip-text text-lg sm:text-2xl md:text-2xl lg:text-3xl font-semibold tracking-wider">
             Jam Dinding Kayu
           </h1>
-          <div className="space-y-2">
-            <h2 className="bg-gradient-to-r from-custom-dark-green via-custom-olive-green to-custom-light-olive-green text-transparent bg-clip-text text-xl font-semibold tracking-wider">
-              Deskripsi
-            </h2>
-            <p className="tracking-widest text-justify line-clamp-6">
-              {productData.description}
-            </p>
-          </div>
-          <div className="flex items-center gap-8">
-            <p className="text-custom-dark-green font-bold tracking-wider text-3xl">
-              Rp. {productData.price}
-            </p>
-            <MainButton>Beli Produk</MainButton>
+          <div className="flex flex-col-reverse gap-2 md:gap-4 justify-start lg:flex-col">
+            <div className="space-y-2">
+              <h2 className="bg-gradient-to-r from-custom-dark-green via-custom-olive-green to-custom-light-olive-green text-transparent bg-clip-text text-base sm:text-lg md:text-xl lg:text-2xl font-semibold tracking-wider">
+                Deskripsi
+              </h2>
+              <p className="tracking-normal md:tracking-wide text-justify lg:line-clamp-6 text-sm md:text-base">
+                {productData.description}
+              </p>
+            </div>
+            <div className="flex justify-between lg:justify-start items-center gap-8">
+              <p className="text-custom-dark-green font-bold tracking-wider text-lg sm:text-xl md:text-2xl">
+                Rp. {productData.price}
+              </p>
+              <MainButton className="text-xs sm:text-sm md:text-base">
+                Beli Produk
+              </MainButton>
+            </div>
           </div>
         </div>
       </section>
-      <section className="space-y-5">
-        <H3 className=" text-[1.5rem]">Produk Lain dari Toko ini</H3>
-        <ul className="grid grid-cols-4 gap-4">
+      <section className="space-y-5 mx-0 sm:mx-5 md:mx-10 lg:mx-20">
+        <H3 className=" text-[1.5rem] xl:text-2xl">
+          Produk Lain dari Toko ini
+        </H3>
+        <ul className="flex gap-4 overflow-scroll">
           {Array.from({ length: 4 }).map((_, i) => (
-            <li key={i} className="w-full tracking-wide">
+            <li key={i} className="min-w-[12.5rem] w-full tracking-wide">
               <Link href={`/toko/product`}>
                 <ProductCard
                   imageSrc={STOREBANNER.src}
@@ -62,11 +70,11 @@ export default function Store({ params }: { params: { productId: string } }) {
           ))}
         </ul>
       </section>
-      <section className="space-y-5">
-        <H3 className=" text-xl">Produk Terkait</H3>
-        <ul className="grid grid-cols-4 gap-4">
+      <section className="space-y-5 mx-0 sm:mx-5 md:mx-10 lg:mx-20">
+        <H3 className=" text-xl  xl:text-2xl">Produk Terkait</H3>
+        <ul className="flex gap-4 overflow-scroll">
           {Array.from({ length: 4 }).map((_, i) => (
-            <li key={i} className="w-full tracking-wide">
+            <li key={i} className="min-w-[12.5rem] w-full tracking-wide">
               <Link href={`/toko/product`}>
                 <ProductCard
                   imageSrc={STOREBANNER.src}
