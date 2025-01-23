@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { HighlightCard } from "@/components/cards/HighlightCard";
 import KOPI from "@/public/dev/kopi.png";
-import { MdFastfood } from "react-icons/md";
+import { MdFastfood, MdFoodBank } from "react-icons/md";
 import H3 from "../title/H3";
+import { ImDelicious } from "react-icons/im";
+import { FaMoneyBill } from "react-icons/fa6";
 
 export default function HighlightSection() {
   return (
@@ -34,14 +36,15 @@ export default function HighlightSection() {
           <li className="w-full h-fit">
             <HighlightCard.Root className="h-fit">
               <HighlightCard.Icon>
-                <MdFastfood size={24} />
+                <FaMoneyBill size={24} />
               </HighlightCard.Icon>
               <HighlightCard.Title className="text-lg md:text-xl lg:text-2xl">
-                Kuliner Khas Kare
+                Sangat Terjangkau
               </HighlightCard.Title>
 
               <HighlightCard.Description className="line-clamp-3 text-sm md:text-base">
-                Produk kami dibuat dengan bahan-bahan alami dan prinsip
+                Tidak perlu khawatir harus merogoh kocek yang dalam karena
+                produk UMKM kare pastinya pas di kantong!
               </HighlightCard.Description>
             </HighlightCard.Root>
           </li>
@@ -58,18 +61,15 @@ export default function HighlightSection() {
           />
           <HighlightCard.Root className="w-[60%] gap-0 md:gap-2 sm:h-[12.5rem] 2xl:h-[12.5rem] absolute top-0 right-0 m-4 aspect-auto sm:aspect-[4/2] lg:aspect-[7/5]">
             <HighlightCard.Icon>
-              <MdFastfood size={24} />
+              <MdFoodBank size={24} />
             </HighlightCard.Icon>
             <HighlightCard.Title className="text-lg md:text-xl lg:text-2xl">
-              Kuliner Khas Kare
+              Sedap dan Bergizi
             </HighlightCard.Title>
             <HighlightCard.Description className="line-clamp-4 text-sm md:text-base">
-              Produk kami dibuat dengan bahan-bahan alami dan prinsip
-              keberlanjutan untuk menjaga lingkungan tetap lestari. Produk kami
-              dibuat dengan bahan-bahan alami dan prinsip keberlanjutan untuk
-              menjaga lingkungan tetap lestari. Produk kami dibuat dengan
-              bahan-bahan alami dan prinsip keberlanjutan untuk menjaga
-              lingkungan tetap lestari.
+              Berbagi produk mulai dari makanan dan minuman yang tidak hanya
+              baik untuk tubuh, tetapi juga pastinya akan memanjakan lidah
+              kalian!
             </HighlightCard.Description>
           </HighlightCard.Root>
         </div>

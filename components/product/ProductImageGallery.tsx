@@ -32,7 +32,7 @@ export default function ProductImageGallery({
       >
         <Image
           className="w-full h-full object-cover"
-          src={images[activeIndex]}
+          src={`${process.env.NEXT_PUBLIC_ADMIN_URL}storage/${images[activeIndex]}`}
           width={500}
           height={500}
           alt=""
@@ -44,7 +44,7 @@ export default function ProductImageGallery({
         {images.map((image, i) => {
           const isActive = activeIndex === i;
           return (
-            <li key={i} className="h-full relative">
+            <li key={image} className="h-full relative">
               <button
                 onClick={() => setActiveIndex(i)}
                 className="h-full w-full rounded-lg sm:rounded-xl md:rounded-2xl relative shadow-lg"
@@ -57,7 +57,7 @@ export default function ProductImageGallery({
                 )}
                 <Image
                   className="w-full h-full object-cover rounded-lg sm:rounded-xl md:rounded-2xl"
-                  src={image}
+                  src={`${process.env.NEXT_PUBLIC_ADMIN_URL}storage/${image}`}
                   layout="fill"
                   alt=""
                   style={{ objectFit: "cover" }} // Menggunakan object-cover untuk proporsi gambar tetap

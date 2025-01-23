@@ -1,8 +1,7 @@
 "use client";
 
 import ContactSection from "@/components/tentangPage/ContactSection";
-import H3 from "@/components/title/H3";
-import { MdEmail } from "react-icons/md";
+
 
 export default function TentangPage() {
   return (
@@ -10,7 +9,9 @@ export default function TentangPage() {
       <section className="grid grid-cols-1 md:grid-cols-2 h-fit justify-center gap-4 md:gap-10">
         <iframe
           className="w-full h-full rounded-xl md:rounded-2xl aspect-video"
-          src="https://www.youtube.com/embed/uB1M-Tp_NwQ?si=acWqeNan3jugD2NB"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/EPO_J4yvDzs?si=n7Oy8USAofZLvuW1"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

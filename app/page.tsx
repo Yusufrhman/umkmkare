@@ -2,53 +2,11 @@ import HeroSection from "@/components/landingPage/HeroSection";
 import HighlightSection from "@/components/landingPage/HighlightSection";
 import H3 from "@/components/title/H3";
 
-
-import MADU from "@/public/dev/madu.png";
-import StoreCard from "@/components/cards/StoreCard";
 import MainButton from "@/components/button/MainButton";
 
 import GALERI from "@/public/dev/galeri.png";
 import GaleryCard from "@/components/cards/GaleryCard";
-import Link from "next/link";
-
-const storeCardData = [
-  {
-    imageSrc: MADU.src,
-    title: "Madu Asli Kare",
-    description:
-      "Nikmati keaslian madu hutan murni yang dihasilkan dari alam Desa Kare, kaya akan nutrisi dan bermanfaat untuk kesehatan.",
-  },
-  {
-    imageSrc: MADU.src,
-    title: "Madu Asli Kare",
-    description:
-      "Nikmati keaslian madu hutan murni yang dihasilkan dari alam Desa Kare, kaya akan nutrisi dan bermanfaat untuk kesehatan.",
-  },
-  {
-    imageSrc: MADU.src,
-    title: "Madu Asli Kare",
-    description:
-      "Nikmati keaslian madu hutan murni yang dihasilkan dari alam Desa Kare, kaya akan nutrisi dan bermanfaat untuk kesehatan.",
-  },
-  {
-    imageSrc: MADU.src,
-    title: "Madu Asli Kare",
-    description:
-      "Nikmati keaslian madu hutan murni yang dihasilkan dari alam Desa Kare, kaya akan nutrisi dan bermanfaat untuk kesehatan.",
-  },
-  {
-    imageSrc: MADU.src,
-    title: "Madu Asli Kare",
-    description:
-      "Nikmati keaslian madu hutan murni yang dihasilkan dari alam Desa Kare, kaya akan nutrisi dan bermanfaat untuk kesehatan. Nikmati keaslian madu hutan murni yang dihasilkan dari alam Desa Kare, kaya akan nutrisi dan bermanfaat untuk kesehatan.Nikmati keaslian madu hutan murni yang dihasilkan dari alam Desa Kare, kaya akan nutrisi dan bermanfaat untuk kesehatan.",
-  },
-  {
-    imageSrc: MADU.src,
-    title: "Madu Asli Kare",
-    description:
-      "Nikmati keaslian madu hutan murni yang dihasilkan dari alam Desa Kare",
-  },
-];
+import UMKMList from "@/components/landingPage/UMKMList";
 
 export default function Home() {
   return (
@@ -60,24 +18,7 @@ export default function Home() {
           Eksplorasi Produk Terbaru dari UMKM Kare
         </H3>
         <div className="overflow-scroll sm:flex items-center justify-center w-full">
-          <ul className="flex sm:grid place-items-start  sm:justify-items-center sm:w-fit sm:mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 my-8 md:mx-8">
-            {storeCardData.map((data, index) => {
-              return (
-                <li
-                  className="w-full h-full min-w-[17.5rem] max-w-[20rem] md:max-w-[24rem] lg:max-w-[28rem]"
-                  key={index}
-                >
-                  <Link href={"/umkm/"+data.title}>
-                    <StoreCard
-                      imageSrc={data.imageSrc}
-                      title={data.title}
-                      description={data.description}
-                    />
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <UMKMList />
         </div>
       </section>
 
