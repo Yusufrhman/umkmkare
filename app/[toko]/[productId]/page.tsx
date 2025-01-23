@@ -15,7 +15,7 @@ const productData = {
   description:
     "Ghaniya Furniture menawarkan berbagai furnitur berkualitas dengan desain khas yang menggabungkan sentuhan modern dan tradisional. Dibuat dari material pilihan oleh pengrajin berpengalaman, setiap produk menghadirkan kenyamanan, daya tahan, dan estetika yang sempurna untuk melengkapi keindahan rumah Anda.",
   price: "150.000",
-  images: [{ image: IMG1.src }, { image: IMG2.src }, { image: IMG3.src }],
+  images: [IMG1.src, IMG3.src, IMG2.src, IMG3.src],
 };
 
 export type paramsType = Promise<{ productId: string }>;
@@ -30,7 +30,7 @@ export default async function ProductPage({ params }: { params: paramsType }) {
       key={productId}
       className="min-h-[100vh] space-y-10 max-w-[100rem] mx-auto "
     >
-      <section className="flex flex-col lg:flex-row gap-6 md:gap-6 lg:gap-10 xl:gap-14 h-fit sm:mx-8 md:mx-25 xl:mx-20 justify-center 2xl:aspect-[20/5]">
+      <section className="flex flex-col lg:flex-row gap-6 md:gap-6 lg:gap-10  h-fit sm:mx-8 md:mx-25 xl:mx-20 justify-center 2xl:aspect-[20/5]">
         <div className="lg:w-1/2 aspect-video sm:aspect-[2/1] md:aspect-[2/1] lg:aspect-video w-full">
           <ProductImageGallery images={productData.images} className="" />
         </div>
