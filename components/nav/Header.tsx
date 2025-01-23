@@ -34,8 +34,8 @@ export default function Header() {
           </NavLink>
         </li>
         <li className="hidden md:block">
-          <NavLink href={"/kontak"} className="text-white text-md font-thin">
-            Kontak
+          <NavLink href={"/tentang"} className="text-white text-md font-thin">
+            Tentang
           </NavLink>
         </li>
         <li>

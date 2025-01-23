@@ -24,18 +24,18 @@ export default function Footer() {
             </NavLink>
           </li>
           <li>
-            <NavLink href={"/"} className="text-white font-thin">
+            <NavLink href={"/produk"} className="text-white font-thin">
               Produk
             </NavLink>
           </li>
           <li>
-            <NavLink href={"/"} className="text-white font-thin">
-              Tentang
+            <NavLink href={"/umkm"} className="text-white font-thin">
+              UMKM
             </NavLink>
           </li>
           <li>
-            <NavLink href={"/"} className="text-white font-thin">
-              Kontak
+            <NavLink href={"/tentang"} className="text-white font-thin">
+              Tentang
             </NavLink>
           </li>
         </ul>

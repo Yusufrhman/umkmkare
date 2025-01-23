@@ -18,7 +18,7 @@ export default function GaleryCard({
 
   return (
     <motion.div
-      className={`rounded-xl overflow-hidden relative group grayscale hover:grayscale-0 ${className}`}
+      className={`rounded-xl overflow-hidden relative group grayscale hover:grayscale-0 transition-all ${className}`}
 
       transition={{ duration: 0.1 }}
       onMouseEnter={() => setIsOpen(true)}

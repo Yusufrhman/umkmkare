@@ -53,10 +53,10 @@ export default function HiddenNav() {
               </li>
               <li className="" onClick={toggleNav}>
                 <NavLink
-                  href={"/kontak"}
+                  href={"/tentang"}
                   className="text-white text-md font-thin"
                 >
-                  Kontak
+                  Tentang
                 </NavLink>
               </li>
             </ul>

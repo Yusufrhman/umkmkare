@@ -27,7 +27,6 @@ export default async function ProductPage({ params }: { params: paramsType }) {
   const { productId } = await params;
   return (
     <main
-      key={productId}
       className="min-h-[100vh] space-y-10 max-w-[100rem] mx-auto "
     >
       <section className="flex flex-col lg:flex-row gap-6 md:gap-6 lg:gap-10  h-fit sm:mx-8 md:mx-25 xl:mx-20 justify-center 2xl:aspect-[20/5]">
