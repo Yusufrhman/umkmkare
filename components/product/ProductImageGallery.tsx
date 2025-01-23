@@ -27,7 +27,7 @@ export default function ProductImageGallery({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.25 }}
-        className="aspect-[12/11] sm:aspect-[2/1] rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden relative w-3/4"
+        className="aspect-[12/11] sm:aspect-[2/1] rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden relative w-3/4 shadow-lg"
       >
         <Image
           className="w-full h-full object-cover"

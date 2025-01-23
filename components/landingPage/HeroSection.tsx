@@ -5,29 +5,29 @@ import MainButton from "@/components/button/MainButton";
 
 import CAROUSEL from "@/public/dev/carousel.png";
 
-
 const dummyItems = [
   {
     title: "Mari Kenali dan Dukung UMKM Desa Kare",
     image: CAROUSEL,
   },
   {
-    title: "lorem ipsum",
+    title: "Pentingnya Pemberdayaan UMKM dalam Mendorong Ekonomi Lokal",
     image: CAROUSEL,
   },
   {
-    title: "loremmm iokasnksk",
+    title: "Inovasi Produk UMKM Desa yang Membanggakan",
     image: CAROUSEL,
   },
   {
-    title: " nasjknsajkn naksdnkdasn kask ksnadkds",
+    title: "Meningkatkan Potensi UMKM Desa Melalui Teknologi dan Kolaborasi",
     image: CAROUSEL,
   },
 ];
+
 export default function HeroSection() {
   return (
     <>
-      <div className="aspect-video max-h-[30rem] w-full">
+      <div className="aspect-video md:aspect-auto md:h-[30rem] w-full">
         <Carousel items={dummyItems} className="" />
       </div>
       <div className="w-full h-fit px-4 py-3 sm:p-4 md:px-8 md:py-8 bg-gradient-to-r from-custom-dark-green via-custom-dark-green to-custom-olive-green my-5 rounded-b-xl flex flex-col sm:flex-row items-center justify-start">
@@ -44,7 +44,9 @@ export default function HeroSection() {
             rel="noopener noreferrer"
             className=" sm:mt-4 w-fit"
           >
-            <MainButton reversed className="text-sm md:text-base p-1">Lihat di Maps</MainButton>
+            <MainButton reversed className="text-sm md:text-base p-1">
+              Lihat di Maps
+            </MainButton>
           </a>
         </section>
         <section className="flex gap-4 items-center justify-center sm:w-[70%] md:w-[75%] lg:w-[80%] sm:border-l border-white sm:pl-5">

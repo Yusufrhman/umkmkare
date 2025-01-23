@@ -52,15 +52,15 @@ const storeCardData = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="max-w-[100rem] mx-auto">
       <HeroSection />
       <HighlightSection />
       <section className=" mt-14 md:mx-4 lg:mx-12">
         <H3 className="text-center text-xl md:text-2xl lg:text-3xl xl:w-1/2 mx-auto">
           Eksplorasi Produk Terbaru dari UMKM Kare
         </H3>
-        <div className="overflow-scroll">
-          <ul className="flex sm:grid place-items-start sm:justify-self-center sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 my-8 md:mx-8">
+        <div className="overflow-scroll sm:flex items-center justify-center w-full">
+          <ul className="flex sm:grid place-items-start  sm:justify-items-center sm:w-fit sm:mx-auto sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 my-8 md:mx-8">
             {storeCardData.map((data, index) => {
               return (
                 <li

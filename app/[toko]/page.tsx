@@ -33,7 +33,7 @@ export default async function StorePage({ params }: { params: paramsType }) {
   };
 
   return (
-    <main className="min-h-[100vh]">
+    <main className="min-h-[100vh] max-w-[100rem] mx-auto">
       <section>
         <StoreBanner imageSrc={storeData.banner} storeName={storeData.name} />
       </section>
