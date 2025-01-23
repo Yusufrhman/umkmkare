@@ -6,10 +6,10 @@ import Link from "next/link";
 export default async function ProductPage() {
   const products = await getAllProducts({});
   return (
-    <main className="max-w-[100rem] mx-auto">
-      <ul className="grid grid-cols-4 gap-4 overflow-scroll">
+    <main className="max-w-[90rem] mx-auto">
+      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-5 my-3 sm:my-4 md:my-6 lg:my-8">
         {products.map((product: any, index: number) => (
-          <li key={index} className="min-w-[12.5rem] w-full tracking-wide">
+          <li key={index} className="w-full tracking-wide">
             <Link href={`/produk/${product.id}`}>
               <ProductCard
                 imageSrc={`${process.env.ADMIN_URL}storage/${product.image_url[0]}`}

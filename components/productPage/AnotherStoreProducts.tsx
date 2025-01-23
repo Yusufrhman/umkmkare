@@ -16,7 +16,7 @@ export default async function AnotherStoreProducts({
     excludeId: currentProductId,
   });
   return (
-    <ul className="grid grid-cols-4 gap-4 overflow-scroll">
+    <ul className="flex gap-4 overflow-scroll">
       {products.map((product: any, index: number) => (
         <li key={index} className="min-w-[12.5rem] w-full tracking-wide">
           <Link href={`/produk/${product.id}`}>
