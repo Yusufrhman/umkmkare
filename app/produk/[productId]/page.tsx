@@ -65,7 +65,7 @@ export default async function ProductPage({ params }: { params: paramsType }) {
         <ul className="flex gap-4 overflow-scroll">
           {Array.from({ length: 4 }).map((_, i) => (
             <li key={i} className="min-w-[12.5rem] w-full tracking-wide">
-              <Link href={`/toko/product`}>
+              <Link href={`/produk/${i}`}>
                 <ProductCard
                   imageSrc={STOREBANNER.src}
                   name={"product"}
@@ -81,7 +81,7 @@ export default async function ProductPage({ params }: { params: paramsType }) {
         <ul className="flex gap-4 overflow-scroll">
           {Array.from({ length: 4 }).map((_, i) => (
             <li key={i} className="min-w-[12.5rem] w-full tracking-wide">
-              <Link href={`/toko/product`}>
+              <Link href={`/produk/${i}`}>
                 <ProductCard
                   imageSrc={STOREBANNER.src}
                   name={"product"}

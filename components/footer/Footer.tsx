@@ -1,5 +1,5 @@
 import Link from "next/link";
-import NavLink from "../header/NavLink";
+import NavLink from "../nav/NavLink";
 import {
   RiFacebookCircleFill,
   RiInstagramFill,

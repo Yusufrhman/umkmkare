@@ -67,7 +67,7 @@ export default function Home() {
                   className="w-full h-full min-w-[17.5rem] max-w-[20rem] md:max-w-[24rem] lg:max-w-[28rem]"
                   key={index}
                 >
-                  <Link href={data.title}>
+                  <Link href={"/umkm/"+data.title}>
                     <StoreCard
                       imageSrc={data.imageSrc}
                       title={data.title}

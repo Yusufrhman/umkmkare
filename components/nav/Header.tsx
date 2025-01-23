@@ -1,11 +1,12 @@
-"use client"
+"use client";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import HamburgerButton from "./HamburgerButton";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { HiddenNavCtx } from "@/context/hiddenNav/HiddenNavCtx";
 
 export default function Header() {
-  const [hiddenNavIsOpen, setHiddenNavIsOpen] = useState(false);
+  const { isOpen, toggleNav } = useContext(HiddenNavCtx);
   return (
     <header className="bg-gradient-to-r from-custom-olive-green via-custom-light-olive-green to-custom-lime-green h-fit rounded-xl p-5 my-5 sticky top-5 z-[1000] shadow-lg ">
       <ul className="text-center flex items-center justify-between md:justify-center gap-10">
@@ -15,7 +16,7 @@ export default function Header() {
           </NavLink>
         </li>
         <li className="hidden md:block">
-          <NavLink href={"/"} className="text-white text-md font-thin">
+          <NavLink href={"/produk"} className="text-white text-md font-thin">
             Produk
           </NavLink>
         </li>
@@ -28,20 +29,20 @@ export default function Header() {
           </Link>
         </li>
         <li className="hidden md:block">
-          <NavLink href={"/"} className="text-white text-md font-thin">
-            Tentang
+          <NavLink href={"/umkm"} className="text-white text-md font-thin">
+            UMKM
           </NavLink>
         </li>
         <li className="hidden md:block">
-          <NavLink href={"/"} className="text-white text-md font-thin">
+          <NavLink href={"/kontak"} className="text-white text-md font-thin">
             Kontak
           </NavLink>
         </li>
         <li>
           <HamburgerButton
-            isOpen={hiddenNavIsOpen}
+            isOpen={isOpen}
             onClick={() => {
-              setHiddenNavIsOpen((isOpen) => !isOpen);
+              toggleNav();
             }}
           />
         </li>
