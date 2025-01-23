@@ -2,7 +2,7 @@
 import ProductCard from "@/components/product/ProductCard";
 import { getAllProducts } from "@/lib/database/actions/product";
 import Link from "next/link";
-export const revalidate = 60;
+// export const revalidate = 60;
 export default async function ProductPage() {
   const products = await getAllProducts({});
   return (
