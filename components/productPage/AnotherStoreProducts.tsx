@@ -16,18 +16,23 @@ export default async function AnotherStoreProducts({
     excludeId: currentProductId,
   });
   return (
-    <ul className="flex gap-4 overflow-scroll">
-      {products.map((product: any, index: number) => (
-        <li key={index} className="min-w-[12.5rem] w-full tracking-wide">
-          <Link href={`/produk/${product.id}`}>
-            <ProductCard
-              imageSrc={`${process.env.ADMIN_URL}storage/${product.image_url[0]}`}
-              name={product.name}
-              price={product.price}
-            />
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <div className="w-full">
+      <ul className="flex md:grid grid-cols-3 lg:grid-cols-4 gap-4 overflow-scroll w-full">
+        {products.map((product: any, index: number) => (
+          <li
+            key={index}
+            className="min-w-[12.5rem] max-h-[15rem] md:max-h-none tracking-wide col-span-1"
+          >
+            <Link href={`/produk/${product.id}`}>
+              <ProductCard
+                imageSrc={`${process.env.ADMIN_URL}storage/${product.image_url[0]}`}
+                name={product.name}
+                price={product.price}
+              />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
